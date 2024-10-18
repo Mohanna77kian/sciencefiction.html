@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science fiction series</title>
+    <style>
+        body{
+            background:linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+        }
+        .container{
+            background:#fcf8f3;
+            max-width: 600px;
+            padding:15px;
+            margin:20px auto;
+            border-radius: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: justify;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        img{
+            max-width: 100%;
+            display: block;
+            margin:0 auto;
+            border-radius: 10px;
+        }
+        .list{
+            display:block;
+            margin:0 auto;
+            color:black;
+            background:white;
+            border:1px solid #bc2525;
+            border-radius: 8px;
+            padding:10px;
+            transition: all 200ms ease-in-out;
+            font-size: 18px;
+        }
+        .list:hover{
+            color:black;
+            background:#bc2525;
+            cursor:pointer;
+        }
+        footer{
+            text-align: center;
+            font-size: 14px;
+        }
+        .theme{
+            display:block;
+            margin:0 auto;
+            padding:10px;
+            border-radius: 6px;
+            color:black;
+            background:white;
+            border:1px solid black;
+        }
+        .theme:hover{
+            color:white;
+            background:#2d4059;
+        }
+        .picture1{
+         transition:transform 200ms ease-in-out;
+         width:590px;
+        }
+        .picture1:hover{
+            transform:scale(1.3);
+        }
+        .grid{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap:7px;
+            padding:5px;
+        }
+        .grid img{
+            width: 100%;
+        }
+        .dark {
+            background:radial-gradient(circle at 10% 20%, rgb(87, 108, 117) 0%, rgb(37, 50, 55) 100.2%);
+        }
+        .dark .container{
+            background:linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+            color:white;
+        }
+    </style>
+</head>
+<body class="dark">
+    <button class="theme">
+        Change Theme
+    </button>
+    <div class="container">
+    <h1>
+        Science fiction series
+    </h1>
+    <h2>
+        My favorite genre
+    </h2>
+    <img src="https://th.bing.com/th/id/OIP.egxhv0Me5vnGAJYFG-SGUAHaEK?rs=1&pid=ImgDetMain" class="picture1"/>
+    <div class="grid">
+    <img src="https://th.bing.com/th/id/OIP.9ZrLTkqKy4Pbg_Pv5iqncAHaEK?rs=1&pid=ImgDetMain" />
+    <img src="https://th.bing.com/th/id/OIP.xrtgE9u4AvSKHDpXdOhU0AHaEK?rs=1&pid=ImgDetMain" />
+    <img src="https://th.bing.com/th/id/OIP.CTD3pUMRQrh3pFd_eOj1HQAAAA?rs=1&pid=ImgDetMain" />
+    </div>
+    <p>
+        Science fiction films This is a list of science fiction films organized chronologically. These films have been released to a cinema audience by the commercial film industry and are widely distributed with reviews by reputable critics. (The exception are the films on the made-for-TV list, which are normally not released to a cinema audience.) This includes silent film–era releases, serial films, and feature-length films. All of the films include core elements of science fiction, but can cross into other genres such as drama, mystery, action, horror, fantasy, and comedy.
+    </p>
+    <button class="list">
+        <strong>
+        List of science fiction films
+        </strong>
+    </button>
+    </div>
+    <footer>
+        <strong>
+        Coded by Mohanna Kian with HTML, CSS and JavaScript
+        </strong>
+    </footer>
+    <script>
+        function changeTheme(){
+            let body = document.querySelector("body");
+            if(body.classList.contains("dark")){
+                body.classList.remove("dark");
+            } else{
+                body.classList.add("dark");
+            }
+        }
+        function listMovie(){
+            let name = prompt("What is your name?");
+            let age = prompt("How old are you?");
+            let email = prompt("What is your email ?");
+            alert("Hi "+ name +" . We will send the names of the movies to your email based on your age range." );
+        }
+        let themeButton = document.querySelector(".theme");
+        themeButton.addEventListener("click", changeTheme);
+        let listButton = document.querySelector(".list");
+        listButton.addEventListener("click", listMovie);
+    </script>
+</body>
+</html>
